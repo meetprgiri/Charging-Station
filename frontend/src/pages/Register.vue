@@ -118,13 +118,13 @@ const isValid = ref(false);
 const isLoading = ref(false);
 
 const rules = {
-  email: (v) => !!(v || "").match(/@/) || "Please enter a valid email",
-  length: (len) => (v) =>
+  email: (v: string) => !!(v || "").match(/@/) || "Please enter a valid email",
+  length: (len: number) => (v) =>
     (v || "").length >= len || `Invalid character length, required ${len}`,
-  password: (v) =>
+  password: (v: string) =>
     !!(v || "").match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/) ||
     "Password must contain an upper case letter, a numeric character, and a special character",
-  required: (v) => !!v || "This field is required",
+  required: (v: string) => !!v || "This field is required",
 };
 
 const register = async () => {

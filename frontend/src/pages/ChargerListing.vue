@@ -74,7 +74,10 @@
       </template>
 
       <template #item.delete="{ item }">
-        <v-icon size="small" color="error" @click="deleteStation(item._id)"
+        <v-icon
+          size="small"
+          color="error"
+          @click="deleteStation(item._id ?? '')"
           >mdi-delete</v-icon
         >
       </template>

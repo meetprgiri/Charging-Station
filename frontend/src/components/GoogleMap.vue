@@ -14,7 +14,7 @@
         >
           <MarkerCluster>
             <Marker
-              v-for="(station, i) in stations"
+              v-for="station in stations"
               :key="station._id"
               :options="{ position: station.location }"
               @click="() => (selectedStation = station)"
@@ -60,6 +60,13 @@ import { GoogleMap, Marker, MarkerCluster } from "vue3-google-map";
 import { ref, onMounted } from "vue";
 import axios from "axios";
 import { defineProps } from "vue";
+
+interface Station {
+  _id: string;
+  location: { lat: number; lng: number };
+}
+
+const stations: Station[] = props.stations || [];
 
 interface Props {
   latitude: number;
