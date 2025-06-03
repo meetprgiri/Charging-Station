@@ -2,8 +2,9 @@
   <router-view />
 </template>
 
-<script lang="ts" setup>
-import "vuetify/styles"; // Vuetify CSS
+<script setup lang="ts">
+// Vuetify styles workaround
+import "../node_modules/vuetify/lib/styles/main.sass";
 </script>
 
 <style>

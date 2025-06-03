@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from './router'
 
 // Vuetify core styles
-import 'vuetify/styles'
+import 'vuetify'
 
 // Material Design Icons
 import '@mdi/font/css/materialdesignicons.css'

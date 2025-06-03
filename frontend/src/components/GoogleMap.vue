@@ -66,8 +66,6 @@ interface Station {
   location: { lat: number; lng: number };
 }
 
-const stations: Station[] = props.stations || [];
-
 interface Props {
   latitude: number;
   longitude: number;
@@ -76,7 +74,7 @@ interface Props {
 const props = defineProps<Props>();
 const center = { lat: props.latitude, lng: props.longitude };
 
-const stations = ref([]);
+const stations = ref<Station[]>([]);
 const selectedStation = ref<any>(null);
 
 onMounted(async () => {
