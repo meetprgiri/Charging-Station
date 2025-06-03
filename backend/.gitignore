@@ -13,5 +13,5 @@ npm-debug.log*
 .DS_Store
 
 # Others
-dist/
-build/
+
+
